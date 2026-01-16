@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "title": "Atlas Brand Refresh",
+      "summary": "A full brand system with logo suite, typography, and social templates for a travel startup.",
+      "category": "Graphic Design",
+      "date": "Aug 2024",
+      "role": "Brand Identity"
+    },
+    {
+      "title": "Midnight Motion Reel",
+      "summary": "High-energy video edit and motion graphics package for a music festival campaign.",
+      "category": "Video Editing",
+      "date": "Jun 2024",
+      "role": "Motion & Editing"
+    },
+    {
+      "title": "Aurora Product Launch",
+      "summary": "Launch visuals, short-form video cuts, and landing page assets for a SaaS release.",
+      "category": "Digital Campaign",
+      "date": "Apr 2024",
+      "role": "Creative Direction"
+    },
+    {
+      "title": "Arcade UX Animation",
+      "summary": "Micro-animations and UI polish for a mobile gaming startup.",
+      "category": "Motion Design",
+      "date": "Feb 2024",
+      "role": "UI Animation"
+    }
+  ]
+}
