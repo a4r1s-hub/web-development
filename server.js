@@ -16,6 +16,11 @@ const dbPath = path.join(__dirname, "data", "app.db");
 
 app.use(express.json());
 app.use(express.static(__dirname));
+app.use("/admin", express.static(path.join(__dirname, "admin")));
+
+app.get("/admin", (req, res) => {
+  res.redirect("/admin/");
+});
 
 const db = new sqlite3.Database(dbPath);
 
