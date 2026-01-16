@@ -3,6 +3,7 @@ const contentConfig = {
     container: "projects-grid",
     endpoint: "/api/projects",
     fallback: "content/projects.json",
+    endpoint: "content/projects.json",
     limit: null,
     key: "projects",
   },
@@ -10,6 +11,7 @@ const contentConfig = {
     container: "featured-projects-grid",
     endpoint: "/api/projects",
     fallback: "content/projects.json",
+    endpoint: "content/projects.json",
     limit: 3,
     key: "projects",
   },
@@ -17,6 +19,7 @@ const contentConfig = {
     container: "blog-grid",
     endpoint: "/api/posts",
     fallback: "content/posts.json",
+    endpoint: "content/posts.json",
     limit: null,
     key: "posts",
   },
@@ -24,6 +27,7 @@ const contentConfig = {
     container: "latest-posts-grid",
     endpoint: "/api/posts",
     fallback: "content/posts.json",
+    endpoint: "content/posts.json",
     limit: 3,
     key: "posts",
   },
@@ -67,6 +71,7 @@ const loadContent = async (endpoint) => {
 };
 
 const renderCollection = async ({ container, endpoint, fallback, limit, key }) => {
+const renderCollection = async ({ container, endpoint, limit, key }) => {
   const target = document.getElementById(container);
   if (!target) {
     return;
@@ -80,6 +85,11 @@ const renderCollection = async ({ container, endpoint, fallback, limit, key }) =
       data = await loadContent(fallback);
     }
 
+    const response = await fetch(endpoint, { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error(`Failed to load ${endpoint}`);
+    }
+    const data = await response.json();
     const list = Array.isArray(data) ? data : data[key] || [];
     const items = limit ? list.slice(0, limit) : list;
 
