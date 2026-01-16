@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Studio Portfolio</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script defer src="assets/site.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="logo" href="index.html">Studio Portfolio</a>
+        <div class="nav-links">
+          <a href="projects.html">Projects</a>
+          <a href="blog.html">Blog</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Creative Portfolio</p>
+          <h1>Showcase design, motion, and storytelling.</h1>
+          <p class="lead">
+            A clean, responsive home for your graphic design, video editing, and
+            multimedia projects. Manage new projects and blog posts with a visual
+            editor instead of editing code.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="projects.html">View Projects</a>
+            <a class="button ghost" href="blog.html">Read the Blog</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>What you can highlight</h2>
+          <ul>
+            <li>Brand identity systems &amp; graphics</li>
+            <li>Video editing reels and motion design</li>
+            <li>Campaigns, case studies, and process</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="featured-projects">
+        <div class="section-heading">
+          <h2 id="featured-projects">Featured Projects</h2>
+          <a class="text-link" href="projects.html">See all projects →</a>
+        </div>
+        <div id="featured-projects-grid" class="card-grid"></div>
+      </section>
+
+      <section class="section" aria-labelledby="latest-posts">
+        <div class="section-heading">
+          <h2 id="latest-posts">Latest Posts</h2>
+          <a class="text-link" href="blog.html">Visit the blog →</a>
+        </div>
+        <div id="latest-posts-grid" class="card-grid"></div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div>
+          <h2>Let’s collaborate.</h2>
+          <p>
+            Share project details, timelines, or creative needs and we can start
+            planning.
+          </p>
+        </div>
+        <div class="contact-card">
+          <p><strong>Email</strong><br />hello@yourstudio.com</p>
+          <p><strong>Location</strong><br />Remote / Worldwide</p>
+          <a class="button primary" href="mailto:hello@yourstudio.com">Start a project</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2024 Studio Portfolio. Built for creatives.</p>
+    </footer>
+  </body>
+</html>
