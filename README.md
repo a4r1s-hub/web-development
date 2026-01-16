@@ -45,6 +45,7 @@ npm start
 
 1. Open `http://localhost:3000/admin/`.
 2. Sign in with your admin credentials.
+3. Add new projects or blog posts (include optional cover image and live link fields). They are stored in `data/app.db`.
 3. Add new projects or blog posts. They are stored in `data/app.db`.
 
 ## JSON fallback

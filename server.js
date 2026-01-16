@@ -42,6 +42,8 @@ db.serialize(() => {
       category TEXT NOT NULL,
       date TEXT NOT NULL,
       role TEXT NOT NULL,
+      image_url TEXT,
+      link_url TEXT,
       created_at TEXT DEFAULT CURRENT_TIMESTAMP
     )`
   );
@@ -54,9 +56,16 @@ db.serialize(() => {
       category TEXT NOT NULL,
       date TEXT NOT NULL,
       read_time TEXT NOT NULL,
+      image_url TEXT,
+      link_url TEXT,
       created_at TEXT DEFAULT CURRENT_TIMESTAMP
     )`
   );
+
+  db.run("ALTER TABLE projects ADD COLUMN image_url TEXT", () => {});
+  db.run("ALTER TABLE projects ADD COLUMN link_url TEXT", () => {});
+  db.run("ALTER TABLE posts ADD COLUMN image_url TEXT", () => {});
+  db.run("ALTER TABLE posts ADD COLUMN link_url TEXT", () => {});
 
   db.get("SELECT id FROM users WHERE email = ?", [defaultEmail], async (err, row) => {
     if (err) {
@@ -101,7 +110,7 @@ app.post("/api/login", (req, res) => {
 
 app.get("/api/projects", (req, res) => {
   db.all(
-    "SELECT title, summary, category, date, role FROM projects ORDER BY created_at DESC",
+    "SELECT title, summary, category, date, role, image_url as imageUrl, link_url as linkUrl FROM projects ORDER BY created_at DESC",
     (err, rows) => {
       if (err) {
         return res.status(500).json({ error: "Failed to load projects" });
@@ -112,10 +121,10 @@ app.get("/api/projects", (req, res) => {
 });
 
 app.post("/api/projects", authenticate, (req, res) => {
-  const { title, summary, category, date, role } = req.body;
+  const { title, summary, category, date, role, imageUrl, linkUrl } = req.body;
   db.run(
-    "INSERT INTO projects (title, summary, category, date, role) VALUES (?, ?, ?, ?, ?)",
-    [title, summary, category, date, role],
+    "INSERT INTO projects (title, summary, category, date, role, image_url, link_url) VALUES (?, ?, ?, ?, ?, ?, ?)",
+    [title, summary, category, date, role, imageUrl || null, linkUrl || null],
     function (err) {
       if (err) {
         return res.status(500).json({ error: "Failed to save project" });
@@ -127,7 +136,7 @@ app.post("/api/projects", authenticate, (req, res) => {
 
 app.get("/api/posts", (req, res) => {
   db.all(
-    "SELECT title, summary, category, date, read_time as readTime FROM posts ORDER BY created_at DESC",
+    "SELECT title, summary, category, date, read_time as readTime, image_url as imageUrl, link_url as linkUrl FROM posts ORDER BY created_at DESC",
     (err, rows) => {
       if (err) {
         return res.status(500).json({ error: "Failed to load posts" });
@@ -138,10 +147,10 @@ app.get("/api/posts", (req, res) => {
 });
 
 app.post("/api/posts", authenticate, (req, res) => {
-  const { title, summary, category, date, readTime } = req.body;
+  const { title, summary, category, date, readTime, imageUrl, linkUrl } = req.body;
   db.run(
-    "INSERT INTO posts (title, summary, category, date, read_time) VALUES (?, ?, ?, ?, ?)",
-    [title, summary, category, date, readTime],
+    "INSERT INTO posts (title, summary, category, date, read_time, image_url, link_url) VALUES (?, ?, ?, ?, ?, ?, ?)",
+    [title, summary, category, date, readTime, imageUrl || null, linkUrl || null],
     function (err) {
       if (err) {
         return res.status(500).json({ error: "Failed to save post" });

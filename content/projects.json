@@ -5,28 +5,36 @@
       "summary": "A full brand system with logo suite, typography, and social templates for a travel startup.",
       "category": "Graphic Design",
       "date": "Aug 2024",
-      "role": "Brand Identity"
+      "role": "Brand Identity",
+      "imageUrl": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80",
+      "linkUrl": "https://example.com/atlas-brand"
     },
     {
       "title": "Midnight Motion Reel",
       "summary": "High-energy video edit and motion graphics package for a music festival campaign.",
       "category": "Video Editing",
       "date": "Jun 2024",
-      "role": "Motion & Editing"
+      "role": "Motion & Editing",
+      "imageUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
+      "linkUrl": "https://example.com/midnight-reel"
     },
     {
       "title": "Aurora Product Launch",
       "summary": "Launch visuals, short-form video cuts, and landing page assets for a SaaS release.",
       "category": "Digital Campaign",
       "date": "Apr 2024",
-      "role": "Creative Direction"
+      "role": "Creative Direction",
+      "imageUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+      "linkUrl": "https://example.com/aurora-launch"
     },
     {
       "title": "Arcade UX Animation",
       "summary": "Micro-animations and UI polish for a mobile gaming startup.",
       "category": "Motion Design",
       "date": "Feb 2024",
-      "role": "UI Animation"
+      "role": "UI Animation",
+      "imageUrl": "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=800&q=80",
+      "linkUrl": "https://example.com/arcade-animation"
     }
   ]
 }

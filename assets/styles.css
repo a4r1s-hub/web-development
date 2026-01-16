@@ -175,6 +175,14 @@ h3 {
   gap: 16px;
 }
 
+.card-media {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
 .card .tag {
   display: inline-flex;
   align-items: center;
@@ -187,6 +195,13 @@ h3 {
 
 .card h3 {
   margin: 0;
+}
+
+.card h3 a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
 }
 
 .card p {
