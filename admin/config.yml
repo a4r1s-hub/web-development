@@ -1,0 +1,42 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    files:
+      - label: "Project List"
+        name: "projectList"
+        file: "content/projects.json"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+  - name: "posts"
+    label: "Blog Posts"
+    files:
+      - label: "Post List"
+        name: "postList"
+        file: "content/posts.json"
+        fields:
+          - label: "Posts"
+            name: "posts"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Read Time", name: "readTime", widget: "string" }
