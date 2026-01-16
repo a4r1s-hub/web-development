@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Studio CMS</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <main class="admin-shell">
+      <section class="panel" id="login-panel">
+        <h1>Studio CMS Login</h1>
+        <p class="muted">Use your local admin credentials to access content tools.</p>
+        <form id="login-form">
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Password
+            <input type="password" name="password" required />
+          </label>
+          <button type="submit">Sign in</button>
+          <p class="error" id="login-error"></p>
+        </form>
+      </section>
+
+      <section class="panel hidden" id="dashboard">
+        <header class="dashboard-header">
+          <div>
+            <h1>Content Dashboard</h1>
+            <p class="muted">Create new projects and blog posts stored in your database.</p>
+          </div>
+          <button id="logout">Log out</button>
+        </header>
+
+        <div class="grid">
+          <form class="card" id="project-form">
+            <h2>Add Project</h2>
+            <label>
+              Title
+              <input type="text" name="title" required />
+            </label>
+            <label>
+              Summary
+              <textarea name="summary" rows="3" required></textarea>
+            </label>
+            <label>
+              Category
+              <input type="text" name="category" required />
+            </label>
+            <label>
+              Date
+              <input type="text" name="date" required />
+            </label>
+            <label>
+              Role
+              <input type="text" name="role" required />
+            </label>
+            <button type="submit">Save Project</button>
+            <p class="success" id="project-success"></p>
+          </form>
+
+          <form class="card" id="post-form">
+            <h2>Add Blog Post</h2>
+            <label>
+              Title
+              <input type="text" name="title" required />
+            </label>
+            <label>
+              Summary
+              <textarea name="summary" rows="3" required></textarea>
+            </label>
+            <label>
+              Category
+              <input type="text" name="category" required />
+            </label>
+            <label>
+              Date
+              <input type="text" name="date" required />
+            </label>
+            <label>
+              Read Time
+              <input type="text" name="readTime" required />
+            </label>
+            <button type="submit">Save Post</button>
+            <p class="success" id="post-success"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
