@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "title": "Crafting a Cohesive Visual System",
+      "summary": "The checklist I use to keep brand visuals consistent across print, web, and video.",
+      "category": "Design",
+      "date": "Sep 10, 2024",
+      "readTime": "5 min read",
+      "imageUrl": "https://images.unsplash.com/photo-1487611459768-bd414656ea10?auto=format&fit=crop&w=800&q=80",
+      "linkUrl": "https://example.com/blog/visual-system"
+    },
+    {
+      "title": "Editing Faster Without Losing Quality",
+      "summary": "Workflow tips for organizing footage, managing assets, and speeding up revisions.",
+      "category": "Video",
+      "date": "Aug 18, 2024",
+      "readTime": "7 min read",
+      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+      "linkUrl": "https://example.com/blog/editing-faster"
+    },
+    {
+      "title": "Presenting Creative Work to Clients",
+      "summary": "How to structure decks and storyboards so stakeholders say yes with confidence.",
+      "category": "Business",
+      "date": "Jul 30, 2024",
+      "readTime": "6 min read",
+      "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+      "linkUrl": "https://example.com/blog/presenting-work"
+    }
+  ]
+}
